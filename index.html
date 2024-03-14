@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JavaScript en HTML</title>
+</head>
+<body>
+    <style>
+        #informacion, p{
+        color: crimson;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+
+    <h1>Que es java script?</h1>
+    <p>JavaScript es un lenguaje de programación de alto nivel, interpretado y de propósito general que se utiliza principalmente para agregar interactividad y funcionalidad a las páginas web. Es uno de los tres pilares de las tecnologías web junto con HTML (Hypertext Markup Language) y CSS (Cascading Style Sheets).
+
+        JavaScript fue creado originalmente por Brendan Eich en 1995 mientras trabajaba en Netscape Communications Corporation. Desde entonces, ha experimentado un tremendo crecimiento y se ha convertido en uno de los lenguajes de programación más populares del mundo.</p>
+
+<h1>Ejemplos de JavaScript en HTML</h1>
+
+<button onclick="saludar()">Saludar</button>
+<button onclick="cambiarColor()">Cambiar A Color Azul</button>
+
+<p id="parrafo">Example.</p>
+
+<input type="number" id="num1" placeholder="Ingrese el primer número">
+<input type="number" id="num2" placeholder="Ingrese el segundo número">
+
+<button onclick="sumar()">Sumar</button>
+<button onclick="restar()">Restar</button>
+<button onclick="multiplicar()">Multiplicar</button>
+<button onclick="dividir()">Dividir</button>
+
+<p id="resultado"></p>
+
+<script>
+    function saludar() {
+        alert('Hola mundo');
+    }
+
+    function cambiarColor() {
+        var parrafo = document.getElementById("parrafo");
+        parrafo.style.color = "blue";
+    }
+
+    function sumar() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var resultado = num1 + num2;
+        document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + resultado;
+    }
+
+    function restar() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var resultado = num1 - num2;
+        document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + resultado;
+    }
+
+    function multiplicar() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var resultado = num1 * num2;
+        document.getElementById("resultado").innerHTML = "El resultado de la multiplicación es: " + resultado;
+    }
+
+    function dividir() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        if (num2 === 0) {
+            document.getElementById("resultado").innerHTML = "No se puede dividir entre cero";
+        } else {
+            var resultado = num1 / num2;
+            document.getElementById("resultado").innerHTML = "El resultado de la división es: " + resultado;
+        }
+    }
+</script>
+<p>
+        <p id="informacion">// Declaración de variables con let</p>
+        let mensaje = "Hola, mundo!"; <br>
+    console.log(mensaje); // Salida: Hola, mundo! <br><br>
+
+    <p id="informacion">// Las variables let pueden ser reasignadas</p>
+    mensaje = "¡Hola, amigos!"; <br>
+    console.log(mensaje); // Salida: ¡Hola, amigos! <br><br>
+
+    <p id="informacion">// Declaración de variables con const</p>
+    const PI = 3.14159; <br>
+    console.log(PI); // Salida: 3.14159 <br>
+
+   <p id="informacion">// Las variables const no pueden ser reasignadas<br>
+    // Esto lanzará un error <br>
+    // PI = 3; <br>
+
+    // Sin embargo, las variables const deben ser inicializadas al momento de la declaración<br>
+    // Esto lanzará un error<br>
+    // const nombre; <br>
+
+    // Las variables const también pueden ser objetos, y aunque sus propiedades pueden cambiar, la asignación a la variable en sí no puede cambiar.</p>
+    const persona = { <br>
+        nombre: "Juan", <br>
+        edad: 30 <br>
+    }; <br>
+
+    console.log(persona); <br>
+
+    var a = 5; <br>
+var b = "5";<br>
+console.log(a == b); // resultado: true<br>
+var a = 5;<br>
+var b = "5";<br>
+console.log(a === b); // resultado: false<br>
+var a = 5;<br>
+var b = "5";<br>
+console.log(a != b); // resultado: false<br>
+var x = 10;<br>
+var y = 5;<br>
+console.log(x > y); // resultado: true<br>
+console.log(x < y); // resultado: false<br>
+var x = 10;<br>
+var y = 5;<br>
+console.log(x >= y); // resultado: true<br>
+console.log(x <= y); // resultado: false<br>
+</p>
+
+</body>
+</html>
